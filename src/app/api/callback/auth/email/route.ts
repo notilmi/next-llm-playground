@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
   // redirect the user to an error page with some instructions
 
   redirect(
-    `/login?error=${encodeURIComponent(
+    `/login?error_description=${encodeURIComponent(
       "Error Occured While Trying To Log You In, Please Try Again Later"
     )}`
   );

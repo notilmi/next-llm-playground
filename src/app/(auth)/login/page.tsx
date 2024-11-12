@@ -19,7 +19,7 @@ function LoginPage() {
   });
 
   const searchParams = useSearchParams();
-  const error = searchParams.get("error_description");
+  const auth_error = searchParams.get("error_description");
 
   useEffect(() => {
     if (loginState && loginState.message) {
@@ -56,11 +56,11 @@ function LoginPage() {
           Sign In With Email
         </Button>
       </form>
-      {error ? (
+      {auth_error ? (
         <div className="w-full bg-destructive rounded-lg p-4 flex flex-row items-center gap-4 text-destructive-foreground">
           <AlertCircle className="text-destructive-foreground" />
           <p className="text-sm">
-            {error ??
+            {auth_error ??
               "An Error Occured While Trying To Sign You In, Please Try Again Later"}
           </p>
         </div>

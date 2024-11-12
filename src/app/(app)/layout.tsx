@@ -11,7 +11,7 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: "LLM Playground",
-  description: "Sign in to access the LLM Playground.",
+  description: "Create Your LLM Client Imaginable",
 };
 
 export default function RootLayout({
@@ -22,11 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(
-          "antialiased min-h-screen font-sans",
-          fontSans.variable,
-          "h-screen w-screen flex items-center justify-center"
-        )}
+        className={cn("antialiased min-h-screen font-sans", fontSans.variable)}
       >
         <Toaster />
         {children}
