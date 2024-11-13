@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
